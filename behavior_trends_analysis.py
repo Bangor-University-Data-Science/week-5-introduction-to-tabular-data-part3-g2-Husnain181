@@ -4,7 +4,7 @@ def import_data(OnlineRetail: str) -> pd.DataFrame:
     if filename.endswith('.xlsx'):
         df = pd.read_excel(OnlineRetail.xlsx)
     elif filename.endswith('.csv'):
-        df = pd.read_csv(filename)
+        df = pd.read_csv(OnlineRetail)
     else:
         raise ValueError("Unsupported file format. Use .xlsx or .csv")
     return df
